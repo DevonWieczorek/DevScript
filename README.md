@@ -13,6 +13,7 @@ Dependencies:
 
 Tested in:
 - Google Chrome
+- Firefox
 
 DevScript can be considered an extension of the jQuery library, using it's own syntax.
 jQuery is automatically installed on runtime so you'll never have to worry about forgetting to include it again.
