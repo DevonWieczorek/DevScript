@@ -562,7 +562,7 @@ function Dev(){
     // @duration - int (in milliseconds), start of the time clock (total duration of the timer)
     // @callback - function, optional callback to be called after the timer ends
     // Credit for the time logic: https://www.w3schools.com/howto/howto_js_countdown.asp
-    this.countDown = function(elem, options, duration, callback){
+    this.countDown = function(elem, duration, callback, options){
         
         var settings = $.extend({
             seconds: true, // Show seconds
