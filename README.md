@@ -11,6 +11,9 @@ Languages:
 Dependencies:
 - jQuery
 
+Tested in:
+- Google Chrome
+
 DevScript can be considered an extension of the jQuery library, using it's own syntax.
 jQuery is automatically installed on runtime so you'll never have to worry about forgetting to include it again.
 Users can manually install their preferred version of jQuery at anytime by calling $D.getjQuery('#.#.#', true);
