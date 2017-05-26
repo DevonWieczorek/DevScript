@@ -647,11 +647,11 @@ function Dev(){
                 wrapperCSS += 'padding-top: ' + top + ' !important;';
                 wrapperCSS += 'padding-bottom: ' + bottom + ' !important;';
             wrapperCSS += '}';
-        this.newCSSRule(wrapperCSS);
+        this.insertCSS(wrapperCSS);
         
         var uiCSS = '#' + os + '-UI-Top, #' + os + '-UI-Bottom{';
             uiCSS += 'width: 100% !important; background: #000 !important; position: fixed !important; left: 0px !important; z-index: 99999 !important;}'
-        this.newCSSRule(uiCSS);
+        this.insertCSS(uiCSS);
 
         // Allow styles to be overridden on the scroll event
         $('#' + os + '-UI-Top').css({'height': top, 'top': '0px'});
