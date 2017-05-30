@@ -451,6 +451,8 @@ function Dev(){
     // @min - integer, minimum number to return
     // @max - integer, maximum number to return
     this.randomNumber = function(min, max){
+        min = min || 0;
+        max = max || 10;
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
@@ -914,8 +916,6 @@ function Design(){
         elem.css({
             'position': 'absolute',
             'left': left,
-            
-            
             'right': 'auto',
         });
         return elem;

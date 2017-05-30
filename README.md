@@ -17,6 +17,7 @@ Tested in:
 
 Known Limitations:
 - Function chaining is not supported, therefore 'this' in certain contexts may not work
+- Scroll event for simulateMobileUI is not triggered in Firefox
 
 TODO:
 - Figure out how to properly chain functions
