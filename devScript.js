@@ -1,5 +1,5 @@
 // DevScript.js
-// v0.1.0
+// v0.1.1
 
 // This will be our main class
 function Dev(){
@@ -502,6 +502,12 @@ function Dev(){
             showZeros: true // Show leading zeros when that increment is empty
         }, options);
         
+        // Allow options to be skipped without passing empty object
+        if(this.isNumber(options)){
+            callback = timeout;
+            timeout = options;
+        } 
+        
         elem = $(elem);
         timeout = timeout / 1000; // Convert timeout to seconds
         
@@ -576,6 +582,12 @@ function Dev(){
         var timeString = '';
         elem = $(elem) || $('body'); // Default to body
         duration = duration || 60000; // Default to 60 seconds
+        
+        // Allow options to be passed in without a callback
+        if(typeof callback !== 'function'){
+            options = callback;
+            callback = '';
+        }
 
         // Update the count down every 1 second
         var cd = setInterval(function() {

@@ -19,7 +19,7 @@ Known Limitations:
 - Function chaining is not supported, therefore 'this' in certain contexts may not work
 
 TODO:
-- Fix countup/down functions so that if no options are passed, callbacks will still work
+- Figure out how to properly chain functions
 
 DevScript can be considered an extension of the jQuery library, using it's own syntax.
 jQuery is automatically installed on runtime so you'll never have to worry about forgetting to include it again.
