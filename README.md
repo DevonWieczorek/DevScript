@@ -1,8 +1,8 @@
 # DevScript
 Lightweight Javascript library with jQuery dependancies. For developers, by developers.
 Author: Devon Wieczorek
-Release: 0.1.0
-Last Updated: 5/26/2017
+Release: 0.1.1
+Last Updated: 5/30/2017
 
 Languages:
 - Javascript
