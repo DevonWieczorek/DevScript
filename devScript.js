@@ -1,5 +1,9 @@
+/***********************************************/
 // DevScript.js
-// v0.1.1
+// v0.1.2
+// Authored/Compiled By: Devon Wieczorek
+// https://github.com/DevonWieczorek/DevScript
+/***********************************************/
 
 // This will be our main class
 function Dev(){
@@ -219,7 +223,6 @@ function Dev(){
         ((path) ? "; path=" + path : "") +
         ((domain) ? "; domain=" + domain : "") +
         ((secure) ? "; secure" : "");
-
     }
     
     // Returns a string containing value of a specified cookie
@@ -269,6 +272,7 @@ function Dev(){
     // Credit: https://bgrins.github.io/devtools-snippets/
     this.reportHTTPHeaders = function() {
         var request = new XMLHttpRequest();
+        var browser = this.browser;
         request.open('HEAD', window.location, true);
 
         request.onload = request.onerror = function () {
@@ -276,10 +280,18 @@ function Dev(){
             var tab = headers.split("\n").map(function(h) {
                 return { "Key": h.split(": ")[0], "Value": h.split(": ")[1] }
             }).filter(function(h) { return h.Value !== undefined; });
+            
+            // Console.table exists in Edge but "is not implemented"
+            // Assume the worst for IE
+            if(browser == 'Edge' || browser == 'IE' || browser == undefined || !console.table){
+                console.log(headers);
+            }
+            else{
+                console.group("Request Headers");
+                console.table(tab);
+                console.groupEnd("Request Headers");
+            }
 
-            console.group("Request Headers");
-            console.table(tab);
-            console.groupEnd("Request Headers");
         };
 
         request.send(null);
@@ -320,10 +332,18 @@ function Dev(){
             return { "Key": qs.split("=")[0], "Value": qs.split("=")[1], "Pretty Value": decodeURIComponent(qs.split("=")[1]).replace(/|/g," ") }
         });
 
-        console.group("Querystring Values");
-        console.log("URL: " + url + "\nQueries:  " + querystring);
-        console.table(tab);
-        console.groupEnd("Querystring Values");
+        // Console.table exists in Edge but "is not implemented"
+        // Assume the worst for IE
+        if(this.browser == 'Edge' || this.browser == 'IE' || this.browser == undefined || !console.table){
+            console.log("URL: " + url + "\nQueries:  " + querystring);
+            console.log(tab)
+        }
+        else{
+            console.group("Querystring Values");
+            console.log("URL: " + url + "\nQueries:  " + querystring);
+            console.table(tab);
+            console.groupEnd("Querystring Values");
+        }
     }
     
     // Use browser's native ability to validate an email string
@@ -805,8 +825,6 @@ function Design(){
     // @stop - valid hex or rgb(a) string, end color for gradient
     this.linearGradient = function(deg, start, stop){
         var style = [];
-        if(start.indexOf('#') == -1) start = '#' + start;
-        if(stop.indexOf('#') == -1) stop = '#' + stop;
         var gt = (deg <= 45 || (deg >= 135 && deg < 226) || deg >= 315) ? 1 : 0;
         
         var fallback = 'background: ' + start + ';';
@@ -846,8 +864,6 @@ function Design(){
     // @stop - valid hex or rgb(a) string, end color for gradient
     this.radialGradient = function(start, stop){
         var style = [];
-        if(start.indexOf('#') == -1) start = '#' + start;
-        if(stop.indexOf('#') == -1) stop = '#' + stop;
         
         var fallback = 'background: ' + start + ';';
         var moz = 'background: -moz-radial-gradient(center, ellipse cover, ' + start +' 0%, ' + stop +' 100%);'

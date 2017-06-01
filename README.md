@@ -1,8 +1,8 @@
 # DevScript
 Lightweight Javascript library with jQuery dependancies. For developers, by developers.
 Author: Devon Wieczorek
-Release: 0.1.1
-Last Updated: 5/30/2017
+Release: 0.1.2
+Last Updated: 6/1/2017
 
 Languages:
 - Javascript
@@ -14,10 +14,14 @@ Dependencies:
 Tested in:
 - Google Chrome
 - Firefox
+- Edge
+- IE 11
 
 Known Limitations:
 - Function chaining is not supported, therefore 'this' in certain contexts may not work
-- Scroll event for simulateMobileUI is not triggered in Firefox
+- Scroll event for simulateMobileUI is not triggered in Firefox or IE
+- Console.table is not supported in Edge or IE, so console.log is used instead
+- Custom log is not supported in Edge or IE
 
 TODO:
 - Figure out how to properly chain functions
