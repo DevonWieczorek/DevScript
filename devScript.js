@@ -8,6 +8,9 @@
 // This will be our main class
 function Dev(){
     
+    // Maintain version of this script 
+    this.version = '0.1.2';
+    
     // Add jQuery to the document on the fly
     // @jQV - string, version of jQuery to load (ex. '3.2.1')
     // override - boolean, whether or not to override current version of jQuery if found
@@ -188,6 +191,7 @@ function Dev(){
     // Print the current URL, Browser, jQuery version in use, 
     // and width of browser scrollbar to the console
     this.reportInfo = function(){
+        console.log('Running DevScript version ' + this.version);
         console.log('Running jQuery version ' + jQuery.fn.jquery);
         console.log('URL: ' + this.url);
         console.log('Browser: ' + this.browser);
