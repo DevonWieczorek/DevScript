@@ -1,6 +1,6 @@
 /***********************************************/
 // DevScript.js
-// v0.1.2
+// v0.1.3
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
 /***********************************************/
@@ -9,7 +9,7 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.1.2';
+    this.version = '0.1.3';
     
     // Add jQuery to the document on the fly
     // @jQV - string, version of jQuery to load (ex. '3.2.1')
@@ -176,6 +176,8 @@ function Dev(){
     // @elem - string, class or ID or element to scroll to top
     // @speed - integer, time (in milliseconds) for the scrolling animation
     this.scrollToTop = function(elem, speed){
+        
+        // Allow just speed to be passed 
         if(this.isNumber(elem)){
             speed = elem;
             elem = 'html, body'

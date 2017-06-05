@@ -1,8 +1,8 @@
 # DevScript
 Lightweight Javascript library with jQuery dependancies. For developers, by developers.
 Author: Devon Wieczorek
-Release: 0.1.2
-Last Updated: 6/1/2017
+Release: 0.1.3
+Last Updated: 6/5/2017
 
 Languages:
 - Javascript
@@ -16,6 +16,7 @@ Tested in:
 - Firefox
 - Edge
 - IE 11
+- Opera
 
 Known Limitations:
 - Function chaining is not supported, therefore 'this' in certain contexts may not work
@@ -25,6 +26,7 @@ Known Limitations:
 
 TODO:
 - Figure out how to properly chain functions
+- Figure out why the first call to simulateMobileUI creates another instance of the Dev object
 
 DevScript can be considered an extension of the jQuery library, using it's own syntax.
 jQuery is automatically installed on runtime so you'll never have to worry about forgetting to include it again.
