@@ -1,6 +1,6 @@
 /***********************************************/
 // DevScript.js
-// v0.1.3
+// v0.1.4
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
 /***********************************************/
@@ -9,7 +9,12 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.1.3';
+    this.version = '0.1.4';
+    
+    // Easy linkout to documentation
+    this.documentation = function(){
+        window.open('https://github.com/DevonWieczorek/DevScript', '_blank');
+    }
     
     // Add jQuery to the document on the fly
     // @jQV - string, version of jQuery to load (ex. '3.2.1')
