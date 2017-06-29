@@ -312,10 +312,19 @@ function Dev(){
     // Returns null if parameter is not found
     // @name - string, the parameter who's value you want to return
     // @url - (optional) string, the URL to parse for the parameter - default is current window 
-    this.urlParam = function(name, url){
+    // @caseSensitive - (optional) boolean, do you want the value to be case sensitive
+    this.urlParam = function(name, url, caseSensitive){
         if (!url) url = window.location.href;
-        url = url.toLowerCase();
-        name = name.toLowerCase();
+        if(typeof url == 'boolean'){
+            caseSensitive = url;
+            url = window.location.href;
+            console.log(url + ',' + caseSensitive);
+        }
+        caseSensitive = caseSensitive || false;
+        if(!caseSensitive){
+            url = url.toLowerCase();
+            name = name.toLowerCase();   
+        }
         name = name.replace(/[\[\]]/g, "\\$&");
         var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
             results = regex.exec(url);
