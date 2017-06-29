@@ -318,7 +318,6 @@ function Dev(){
         if(typeof url == 'boolean'){
             caseSensitive = url;
             url = window.location.href;
-            console.log(url + ',' + caseSensitive);
         }
         caseSensitive = caseSensitive || false;
         if(!caseSensitive){
