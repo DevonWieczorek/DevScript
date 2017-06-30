@@ -5,6 +5,8 @@
 // https://github.com/DevonWieczorek/DevScript
 /***********************************************/
 
+'use strict';
+
 // This will be our main class
 function Dev(){
     

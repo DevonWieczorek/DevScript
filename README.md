@@ -2,7 +2,7 @@
 Lightweight Javascript library with jQuery dependancies.
 Author: Devon Wieczorek
 Release: 0.1.4
-Last Updated: 6/29/2017
+Last Updated: 6/30/2017
 
 
 Languages:
