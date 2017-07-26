@@ -1,6 +1,6 @@
 /***********************************************/
 // DevScript.js
-// v0.1.5
+// v0.1.4
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
 /***********************************************/
@@ -11,7 +11,7 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.1.5';
+    this.version = '0.1.4';
     
     // Easy linkout to documentation
     this.documentation = function(){
@@ -422,31 +422,6 @@ function Dev(){
             
             return newArr.join(' ');
         }
-    }
-    
-    // Blink an HTML element at a set interval, JS version of the old <blink> tag
-    // @el - string, the class or ID of the element you would like to blink
-    // @t - integer, the full duration of the blink (from initial state to when it is shown again)
-    this.blink = function(el, t){
-        el = $(el);
-        el.css('opacity', '0');
-        setTimeout(function(){ 
-            el.css('opacity', '1'); 
-            setTimeout(function(){ blink(el, t) }, (t/2));
-        }, (t/2));
-    }
-    
-    // Blink only the text inside an element, JS version of the old <blink> tag
-    // @el - string, the class or ID of the element who's text you would like to blink
-    // @t - integer, the full duration of the blink (from initial state to when it is shown again)
-    this.blinkText = function(el, t){
-        el = $(el);
-        var txt = el.text();
-        el.text('');
-        setTimeout(function(){ 
-            el.text(txt); 
-            setTimeout(function(){ blink(el, t) }, (t/2));
-        }, (t/2));
     }
     
     // Return whether or not the input is a number (or numerical string)
