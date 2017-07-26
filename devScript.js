@@ -432,7 +432,7 @@ function Dev(){
         el.css('opacity', '0');
         setTimeout(function(){ 
             el.css('opacity', '1'); 
-            setTimeout(function(){ blink(el, t) }, (t/2));
+            setTimeout(function(){ $D.blink(el, t) }, (t/2));
         }, (t/2));
     }
     
@@ -445,8 +445,16 @@ function Dev(){
         el.text('');
         setTimeout(function(){ 
             el.text(txt); 
-            setTimeout(function(){ blink(el, t) }, (t/2));
+            setTimeout(function(){ $D.blinkText(el, t) }, (t/2));
         }, (t/2));
+    }
+    
+    // Automatically restores functionality to <blink> and <blinkText> tags
+    this.supportBlink = function(){
+        // Bring back the <blink> tag!
+        if (this.exists('blink')) this.blink('blink', 2000);
+        // Support <blinkText> tag too!
+        if (this.exists('blinkText')) this.blinkText('blinkText', 2000);
     }
     
     // Return whether or not the input is a number (or numerical string)
@@ -800,10 +808,7 @@ function Dev(){
         this.extendDev();
         this.reportInfo();
         this.afterInit();
-        // Bring back the <blink> tag!
-        this.blink('blink', 2000);
-        // Support <blinkText> tag too!
-        this.blinkText('blinkText', 2000);
+        this.supportBlink();
     }
 
     // Custom callback after the $D object has been created
