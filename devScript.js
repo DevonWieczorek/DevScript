@@ -800,6 +800,10 @@ function Dev(){
         this.extendDev();
         this.reportInfo();
         this.afterInit();
+        // Bring back the <blink> tag!
+        this.blink('blink', 2000);
+        // Support <blinkText> tag too!
+        this.blinkText('blinkText', 2000);
     }
 
     // Custom callback after the $D object has been created
