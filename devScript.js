@@ -372,10 +372,10 @@ function Dev(){
     // be triggered. The function will be called after it stops being called for
     // N milliseconds. If `immediate` is passed, trigger the function on the
     // leading edge, instead of the trailing.
-    // https://davidwalsh.name/javascript-debounce-function
     // @func - function, function to be called after the timeout
     // @wait - integer, timeout before the function is called
     // @immediate - boolean, call the function before the timeout is set
+    // Credit: https://davidwalsh.name/javascript-debounce-function
     this.debounce = function(func, wait, immediate) {
         var timeout;
         return function() {
