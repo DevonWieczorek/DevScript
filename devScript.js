@@ -12,7 +12,7 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.1.5';
+    this.version = '0.1.6';
     
     // Easy linkout to documentation
     this.documentation = function(){
