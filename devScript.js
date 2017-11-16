@@ -1,6 +1,6 @@
 /***********************************************/
 // DevScript.js
-// v0.1.6
+// v0.2.0
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
 // <script type="text/javascript" src="http://cdn.rawgit.com/DevonWieczorek/DevScript/master/devScript.min.js"></script>
@@ -12,7 +12,7 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.1.6';
+    this.version = '0.2.0';
     
     // Easy linkout to documentation
     this.documentation = function(){
