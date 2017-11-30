@@ -902,9 +902,9 @@ function Design(){
     // @opacity - (optional) decimal from 0.1 to 1.0 (the "a" value)
     this.hexToRGBA = function(hex, opacity){
         hex = hex.replace('#','');
-        r = parseInt(hex.substring(0,2), 16);
-        g = parseInt(hex.substring(2,4), 16);
-        b = parseInt(hex.substring(4,6), 16);
+        var r = parseInt(hex.substring(0,2), 16);
+        var g = parseInt(hex.substring(2,4), 16);
+        var b = parseInt(hex.substring(4,6), 16);
         
         if(opacity) var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity + ')';
         else var result = 'rgb(' + r + ',' + g + ',' + b + ')';
