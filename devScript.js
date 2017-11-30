@@ -897,9 +897,9 @@ function Design(){
         ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
     }
     
-    // Return Hex Value of a RGB color
-    // @Hex - valid Hex string to convert to a RGB value
-    // @opacity - (optional) decimal, 0.1 - 1.0, the "a" value
+    // Return Hex Value of a RGB(A) color
+    // @hex - valid Hex string to convert to a RGB value
+    // @opacity - (optional) decimal from 0.1 to 1.0 (the "a" value)
     this.hexToRGBA = function(hex, opacity){
         hex = hex.replace('#','');
         r = parseInt(hex.substring(0,2), 16);
