@@ -887,7 +887,7 @@ function Design(){
         return rgba.toString();
     }
     
-    //Return RGB Value of a Hex color
+    // Return RGB Value of a Hex color
     // @rgb - valid rgb string to convert to a Hex value
     this.rgbToHEX = function(rgb){
         rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
@@ -897,7 +897,7 @@ function Design(){
         ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
     }
     
-    //Return Hex Value of a RGB color
+    // Return Hex Value of a RGB color
     // @Hex - valid Hex string to convert to a RGB value
     // @opacity - (optional) decimal, 0.1 - 1.0, the "a" value
     this.hexToRGBA = function(hex, opacity){
