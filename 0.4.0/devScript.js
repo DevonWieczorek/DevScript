@@ -1,6 +1,6 @@
 /***********************************************/
 // DevScript.js
-// v0.4.1
+// v0.4.0
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
 // <script type="text/javascript" src="http://cdn.rawgit.com/DevonWieczorek/DevScript/master/devScript.min.js"></script>
@@ -12,7 +12,7 @@
 function Dev(){
     
     // Maintain version of this script 
-    this.version = '0.4.1';
+    this.version = '0.4.0';
     
     // Easy linkout to documentation
     this.documentation = function(){
@@ -902,8 +902,9 @@ function Design(){
     // @rgb, valid rgb string to convert to rgba
     // @opacity - decimal, 0.1 - 1.0, the "a" value
     this.rgbToRGBA = function(rgb, opacity){
-        var color = rgb.split('(')[1].split(')')[0];
-        var rgba = 'rgba(' + color + ', ' + opacity + ')';
+        var format = rgb.split('(')[0] + 'a';
+        var color = rgb.split(')')[0];
+        var rgba = color + ', ' + opacity + ')';
         return rgba.toString();
     }
     
