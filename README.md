@@ -44,3 +44,13 @@ own custom Hotkeys during development by using the following syntax: var enterKe
 DevScript includes a lightweight minified file, as well as the full Javascript file which is heavily documented.
 Paruse as your leisure, test it out for yourself, and PLEASE any feedback would be much appreciated!
 This project was intended to be open source and I would love to see it take on a life of it's own.
+
+### Linking to DevScript
+To include the latest version of DevScript in your pages you can use the following link:
+```html
+<script type="text/javascript" src="http://cdn.rawgit.com/DevonWieczorek/DevScript/master/devScript.min.js"></script>
+```
+If you are concerned that future updates may break your code you can always link to a specific version using the following format:
+```html
+<script type="text/javascript" src="https://cdn.rawgit.com/DevonWieczorek/DevScript/2616996f/0.4.2/devScript.min.js"></script>
+```
