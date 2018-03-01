@@ -48,7 +48,7 @@ This project was intended to be open source and I would love to see it take on a
 ### Linking to DevScript
 To include the latest version of DevScript in your pages you can use the following link:
 ```html
-<script type="text/javascript" src="http://cdn.rawgit.com/DevonWieczorek/DevScript/master/devScript.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/DevonWieczorek/DevScript/ab746df0/devScript.min.js"></script>
 ```
 If you are concerned that future updates may break your code you can always link to a specific version using the following format:
 ```html
