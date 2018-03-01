@@ -3,7 +3,7 @@
 // v0.4.2
 // Authored/Compiled By: Devon Wieczorek
 // https://github.com/DevonWieczorek/DevScript
-// <script type="text/javascript" src="http://cdn.rawgit.com/DevonWieczorek/DevScript/master/devScript.min.js"></script>
+// <script type="text/javascript" src="https://cdn.rawgit.com/DevonWieczorek/DevScript/ab746df0/devScript.min.js"></script>
 /***********************************************/
 
 'use strict';
