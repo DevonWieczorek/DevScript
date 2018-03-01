@@ -52,5 +52,5 @@ To include the latest version of DevScript in your pages you can use the followi
 ```
 If you are concerned that future updates may break your code you can always link to a specific version using the following format:
 ```html
-<script type="text/javascript" src="https://cdn.rawgit.com/DevonWieczorek/DevScript/2616996f/0.4.2/devScript.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/DevonWieczorek/DevScript/ab746df0/0.4.2/devScript.min.js"></script>
 ```
