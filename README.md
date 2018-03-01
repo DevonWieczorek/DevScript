@@ -55,7 +55,7 @@ $D.afterInit(function(){ alert('Ready to go!'); });
 ### Bonus Classes
 DevScript includes two other classes that are extended on runtime: Design and Hotkeys.
 The design class is a subset of DevScript that contains design-specific functions, and is extended in the Dev oject itself ($D).
-Hotkeys allows you to create your own custom Hotkeys during development by using the following syntax: 
+The Hotkeys object stands on its own and  allows you to create your own custom Hotkeys during development by using the following syntax: 
 ```javascript
 var enterKey = new Hotkeys(13, 'enterKey', function, [arguments]);
 
