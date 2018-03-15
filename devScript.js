@@ -539,7 +539,7 @@ function Dev(){
     // A more specific implementation of Javascript's native typeof
     // Returns whether the argument is a: object, array, arguments, error, date, regex, math, json, number, string, or boolean
     // @obj - the entity to be tested for it's true type
-    // Found on https://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/
+    // Credit: https://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/
     this.isType = function(obj) {
         return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
     }
